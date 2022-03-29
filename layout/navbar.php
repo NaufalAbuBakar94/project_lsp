@@ -31,20 +31,21 @@ require 'function.php';
                     <a href="dashboard.php">Dashboard</a>
                 </li>
 
-                <?php if(isset($_SESSION["username"])) : ?>
+                
+                </ul>
+            </div>
+            <div class="nav-logout">
+                <ul>
+                    <?php if(isset($_SESSION["username"])) : ?> 
+                    <li>
+                        <a href="logout.php">Logout</a>
+                    </li>
                     <li>
                         <a href="#">
                             Halo, <?= $_SESSION["nama"]; ?>
                         </a>
                     </li>
                     <?php endif; ?>
-                </ul>
-            </div>
-            <div class="nav-logout">
-                <ul>
-                    <li>
-                        <a href="logout.php">Logout</a>
-                    </li>
                     <?php if(!isset($_SESSION["username"])) : ?>
                             <li><a href="login/index.php">Login</a></li>
                             <li><a href="register/index.php">Register</a></li>
